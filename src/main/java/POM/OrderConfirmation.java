@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class OrderConfirmation {
     private WebDriver driver;
+
     public OrderConfirmation(WebDriver driver) {
         this.driver = driver;
     }
@@ -15,7 +16,7 @@ public class OrderConfirmation {
 
     //Функция проверить, что заказ создан и есть номер
     public String checkOrderCreatedAndHasNumber() {
-     return driver.findElement(orderConfirmationText).getText();
+        return driver.findElement(orderConfirmationText).getText();
     }
 
 }

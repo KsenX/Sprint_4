@@ -4,12 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-public class OrderStep1 {
+public class OrderStepOne {
     private WebDriver driver;
+
     //Локатор имя
-    public OrderStep1(WebDriver driver) {
+    public OrderStepOne(WebDriver driver) {
         this.driver = driver;
     }
+
     private By nameInput = By.xpath(".//*[@placeholder='* Имя']");
 
     //Локатор фамилия
@@ -44,7 +46,7 @@ public class OrderStep1 {
 
     public void setSubway(String subway) {
         driver.findElement(subwayInput).clear();
-      driver.findElement(subwayInput).sendKeys(subway+ Keys.ARROW_DOWN + Keys.ENTER);
+        driver.findElement(subwayInput).sendKeys(subway + Keys.ARROW_DOWN + Keys.ENTER);
 
     }
 
@@ -59,7 +61,7 @@ public class OrderStep1 {
     }
 
     //Шаг - добавить данные заказа и нажать далее
-    public void createOrderStep1(String name, String surname, String address, String subway, String phone) {
+    public void createOrderStepOne(String name, String surname, String address, String subway, String phone) {
         setName(name);
         setSurname(surname);
         setAddress(address);

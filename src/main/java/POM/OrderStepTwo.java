@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-public class OrderStep2 {
+public class OrderStepTwo {
     private WebDriver driver;
 
-    public OrderStep2(WebDriver driver) {
+    public OrderStepTwo(WebDriver driver) {
         this.driver = driver;
     }
+
     //Локатор дата
     private By chooseDate = By.xpath(".//*[@placeholder='* Когда привезти самокат']");
 
@@ -27,7 +28,7 @@ public class OrderStep2 {
 
     //Функция выбор даты
     public void setDate(String date) {
-        driver.findElement(chooseDate).sendKeys(date+Keys.ENTER);
+        driver.findElement(chooseDate).sendKeys(date + Keys.ENTER);
     }
 
     //Функция выбор срока аренды
@@ -52,7 +53,7 @@ public class OrderStep2 {
     }
 
     //Шаг - завершить заказ
-    public void createOrderStep2(String date, String duration, String color, String comment) {
+    public void createOrderStepTwo(String date, String duration, String color, String comment) {
         setDate(date);
         setRentalDuration(duration);
         setColor(color);
